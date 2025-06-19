@@ -1,75 +1,177 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f5f5f5;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  position: relative;
 }
 
-.todo-container {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1605792657660-596af9009e82') no-repeat center center / cover;
+  opacity: 0.1;
+  z-index: -1;
 }
 
-.input-container {
-    display: flex;
-    margin-bottom: 20px;
+.header {
+  background-color: rgba(13, 13, 13, 0.95);
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-#todoInput {
-    flex: 1;
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-button {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
-button:hover {
-    background-color: #45a049;
+.nav a:hover {
+  text-decoration: underline;
 }
 
-.todo-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 60px 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 1;
 }
 
-.todo-item.completed span {
-    text-decoration: line-through;
-    color: #888;
+.hero-content {
+  flex: 1;
+  min-width: 300px;
 }
 
-.todo-item input[type="checkbox"] {
-    margin-right: 10px;
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.todo-item button {
-    margin-left: auto;
-    background-color: #ff4444;
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.todo-item button:hover {
-    background-color: #cc0000;
+.btn {
+  display: inline-block;
+  background-color: #00a198;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #008f86;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about, .products, .contact {
+  padding: 60px 40px;
+  background-color: rgba(241, 241, 241, 0.9);
+  position: relative;
+  z-index: 1;
+}
+
+.about h2, .products h2, .contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about p, .contact p {
+  margin-bottom: 15px;
+}
+
+.products .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-item {
+  background-color: #fff;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input, .contact textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px;
+  background-color: #00a198;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #008f86;
 }
 
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
+  background-color: rgba(13, 13, 13, 0.95);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
 }

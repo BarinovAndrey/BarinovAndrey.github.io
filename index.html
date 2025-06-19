@@ -1,24 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>РобоТех — Роботы для бизнеса и дома</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="todo-container">
-        <h1>Todo List</h1>
-        <div class="input-container">
-            <input type="text" id="todoInput" placeholder="What needs to be done?">
-            <button id="addTodo">Add</button>
-        </div>
-        <ul id="todoList"></ul>
-        <div class="footer">
-            <span id="itemsLeft">0 items left</span>
-            <button id="clearCompleted">Clear completed</button>
-        </div>
+  <div class="background-overlay"></div>
+
+  <header class="header">
+    <div class="logo">РобоТех</div>
+    <nav class="nav">
+      <a href="#about">О нас</a>
+      <a href="#products">Продукты</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Инновационные роботы для вашего будущего</h1>
+      <p>Продажа и интеграция роботов для бизнеса, образования и дома</p>
+      <a href="#products" class="btn">Посмотреть решения</a>
     </div>
-    <script src="script.js"></script>
+    <div class="hero-image">
+      <img src="https://avatars.mds.yandex.net/i?id=505285b9a30c5152c3c790cfe481eec3155dfb3b-5231332-images-thumbs&n=13" alt="Робот">
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>О компании</h2>
+    <p>РобоТех — российская компания, специализирующаяся на продаже, кастомизации и обслуживании интеллектуальных роботов. Мы работаем с ведущими производителями оборудования и программного обеспечения для робототехники.</p>
+    <p>Наша команда инженеров и программистов помогает клиентам внедрять современные решения, снижающие издержки и повышающие производительность. С 2017 года мы реализовали более 250 успешных проектов в области автоматизации логистики, обучения и производства.</p>
+  </section>
+
+  <section id="products" class="products">
+    <h2>Наши продукты</h2>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="https://thumbs.dreamstime.com/b/plein-corps-de-robot-111685179.jpg" alt="Робот-помощник">
+        <h3>Робот-помощник</h3>
+        <p>Оснащён искусственным интеллектом для выполнения задач в быту и офисе: доставка документов, распознавание лиц, взаимодействие с сотрудниками.</p>
+      </div>
+      <div class="product-item">
+        <img src="https://szkolyalfaiomega.pl/wp-content/uploads/2014/04/poziom4_1.jpg" alt="Образовательный робот">
+        <h3>Образовательный робот</h3>
+        <p>Разработан для школьников и студентов. Позволяет изучать мехатронику, сенсоры, программирование на Python и C++.</p>
+      </div>
+      <div class="product-item">
+        <img src="https://s.alicdn.com/@sc04/kf/Hf4efde54360c4d23812f9f7cc86c9b7bT.jpg" alt="Промышленный робот">
+        <h3>Промышленный робот</h3>
+        <p>Предназначен для сварки, сборки, паллетирования. Поддерживает управление по протоколам EtherCAT и Modbus.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Связаться с нами</h2>
+    <p>Заполните форму ниже, и наш менеджер свяжется с вами в течение 24 часов. Мы предлагаем бесплатную консультацию и подбор оптимального решения под ваши задачи.</p>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 РобоТех. Все права защищены. | info@robotex.ru</p>
+  </footer>
 </body>
 </html>
